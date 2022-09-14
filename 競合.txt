@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 競合を起こしたい
 aaaaaaaaaaaaaaaaaaaa
 
 強豪
+=======
+
+スプラしたいyo
+
+競合を起こしたい
+>>>>>>> 4a4f4460e3d228da1f9add4b57a457cea2a5946a
