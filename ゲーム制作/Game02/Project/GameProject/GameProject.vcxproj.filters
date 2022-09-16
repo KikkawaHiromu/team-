@@ -8,6 +8,9 @@
     <ClCompile Include="Game\Player.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Base">
@@ -22,6 +25,9 @@
       <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="Game\Player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
