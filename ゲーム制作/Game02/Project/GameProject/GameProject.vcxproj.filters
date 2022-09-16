@@ -8,11 +8,16 @@
     <ClCompile Include="Game\Player.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.cpp">
-=======
     <ClCompile Include="Game\Bullet.cpp">
->>>>>>> cf881f6cd7748d3118d48e52b9aa13ffa988ac0b
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effect.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Enemy.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Rock.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -31,11 +36,16 @@
     <ClInclude Include="Game\Player.h">
       <Filter>Game</Filter>
     </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.h">
-=======
     <ClInclude Include="Game\Bullet.h">
->>>>>>> cf881f6cd7748d3118d48e52b9aa13ffa988ac0b
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effect.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Enemy.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Rock.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

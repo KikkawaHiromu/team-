@@ -5,6 +5,8 @@
 
 #include "Game/Player.h"
 #include "Base/Base.h"
+#include"Game/Enemy.h"
+#include"Game/Rock.h"
 
 //--------------------------------------------
 //ƒOƒ[ƒoƒ‹•Ï”—Ìˆæ
@@ -63,6 +65,8 @@ void Init(void)
 	//-----------------------------------------------------
 
 	Base::Add(new Player(CVector2D(200, 500)));
+	Base::Add(new Enemy(CVector2D(1000, 400)));
+	Base::Add(new Rock(CVector2D(1000, 200)));
 
 
 

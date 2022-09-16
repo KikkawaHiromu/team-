@@ -1,9 +1,72 @@
-#include "Base.h"
+#pragma once
+#include"../Base/Base.h"
+#include "..\Game\Bullet.h"
 std::list<Base*> Base::m_list;
-Base::Base(int type) : m_type(type), m_kill(false), m_pos(0, 0), m_rad(0)
-{
+Base::Base(int type) :m_type(type), m_pos(0, 0), m_rad(0) {
 
-}void Base::CheckKillAll()
+}
+Base::~Base() {
+
+}
+void Base::Update() {
+
+}
+void Base::Draw() {
+
+}
+void Base::Collision(Base* b) {
+
+}
+
+void Base::UpdateAll() {
+	//全てのオブジェクトの更新
+	for (auto& b : m_list) {
+		b->Update();
+	}
+}
+void Base::DrawAll() {
+	//全てのオブジェクトの描画処理
+	for (auto& b : m_list) {
+		b->Draw();
+	}
+}
+void Base::Add(Base* b) {
+	//Type順によるソート
+	auto itr = m_list.begin();
+	while (itr != m_list.end()) {
+		if ((*itr)->m_type > b->m_type) {
+			m_list.insert(itr, b);
+			return;
+		}
+		itr++;
+	}
+	//オブジェクトbを末尾に追加
+	m_list.push_back(b);
+}
+bool Base::CollisionCircle(Base* b1, Base* b2) {
+	CVector2D v = b1->m_pos - b2->m_pos;
+	float l = v.Length();
+	if (l < b1->m_rad + b2->m_rad) {
+		return true;
+	}
+	return false;
+
+}
+void Base::CollisionAll() {
+	auto it1 = m_list.begin();
+	auto last = m_list.end();
+	while (it1 != last) {
+		auto it2 = it1;
+		it2++;
+		while (it2 != last) {
+			(*it1)->Collision(*it2);
+			(*it2)->Collision(*it1);
+			it2++;
+		}
+		it1++;
+	}
+}
+void Base::CheckKillAll()
 {
 	auto it = m_list.begin();
 	auto last = m_list.end();
@@ -18,66 +81,7 @@ Base::Base(int type) : m_type(type), m_kill(false), m_pos(0, 0), m_rad(0)
 		}
 	}
 }
-bool Base::CollisionCircle(Base* b1, Base* b2)
-{
-	CVector2D v = b1->m_pos - b2->m_pos;
-	float l = v.Length();
-	if (l < b1->m_rad + b2->m_rad) {
-		return true;
-	}
-	return false;
-}
-Base::~Base()
-{
-}
-
-void Base::Update()
-{
-}
-
-void Base::Draw()
-{
-}
-
-void Base::UpdateAll()
-{
-	for (auto& b : m_list) {
-		b->Update();
-	}
-}
-
-void Base::DrawAll()
-{
-	for (auto& b : m_list) {
-		b->Draw();
-	}
-}
-void Base::Add(Base* b)
-{//Type順によるソート
-	auto itr = m_list.begin();
-	while (itr != m_list.end()) {
-		if ((*itr)->m_type > b->m_type) {
-			m_list.insert(itr, b);
-			return;
-		}
-		itr++;
-	}
-
-	m_list.push_back(b);
-}
-std::list<Base*> Base::FindObjects(int type)
-{
-	std::list<Base*> ret;
-	for (auto& b : m_list) {
-		if (b->m_type == type)
-			ret.push_back(b);
-	}
-	return ret;
-}
-
-
-Base* Base::FindObject(int type)
-{
+Base* Base::FindObject(int type) {
 	//先頭の要素
 	auto it = m_list.begin();
 	//末尾の要素
@@ -85,34 +89,18 @@ Base* Base::FindObject(int type)
 	//itが末尾でなければ
 	while (it != last) {
 		if ((*it)->m_type == type) {
-			//見つけたオブジェクトの返却
-			return (*it);
+			//見つけたオブジェクトの数
+			return(*it);
 		}
 		it++;
 	}
-
 	return nullptr;
 }
-void Base::Collision(Base* b)
-{
-}
-void Base::CollisionAll()
-{
-	auto it1 = m_list.begin();
-	auto last = m_list.end();
-	while (it1 != last) {
-		auto it2 = it1;
-		it2++;
-		while (it2 != last) {
-			(*it1)->Collision(*it2);
-			(*it2)->Collision(*it1);
-			it2++;
-		}
-		it1++;
+std::list<Base*>Base::FindObjects(int type) {
+	std::list<Base*>ret;
+	for (auto& b : m_list) {
+		if (b->m_type == type)
+			ret.push_back(b);
 	}
-
-
-
-
-
+	return ret;
 }

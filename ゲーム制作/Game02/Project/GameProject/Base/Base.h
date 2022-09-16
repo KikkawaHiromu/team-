@@ -1,23 +1,24 @@
 #pragma once
-#include <GLLibrary.h>
-
+#include<GLLibrary.h>
 enum {
 	eType_Player,
 	eType_Enemy,
+	eType_Rock,
 	eType_Bullet,
-	eType_Effect,
-	eType_UI,
+	eType_Player_Bullet,
+	eType_Enemy_Bullet, 
+	eType_Effect
 };
 
 class Base {
 public:
 	int m_type;
 	CVector2D m_pos;
+	CVector2D m_vec;
 	float m_rad;
+	float m_ang;
+	static std::list<Base*> m_list;
 	bool m_kill;
-
-	Base* Base::FindObject(int type);
-
 
 public:
 	Base(int type);
@@ -27,12 +28,12 @@ public:
 	virtual void Collision(Base* b);
 	void SetKill() { m_kill = true; }
 
-	static std::list<Base*> m_list;
 	static void UpdateAll();
 	static void DrawAll();
-	static void CollisionAll();
-	static void CheckKillAll();
 	static void Add(Base* b);
+	static void CollisionAll();
 	static bool CollisionCircle(Base* b1, Base* b2);
-	static std::list<Base*> FindObjects(int type);
+	static void CheckKillAll();
+	Base* Base::FindObject(int Type);
+	static std::list<Base*>FindObjects(int type);
 };
