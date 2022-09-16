@@ -4,8 +4,7 @@
 #define SCREEN_HEIGHT 720
 
 #include "Game/Player.h"
-
-
+#include "Base/Base.h"
 
 //--------------------------------------------
 //グローバル変数領域
@@ -63,7 +62,7 @@ void Init(void)
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 
-	Base::Add(new Player(CVector2D(200, 500),false));
+	Base::Add(new Player(CVector2D(200, 500)));
 
 
 
