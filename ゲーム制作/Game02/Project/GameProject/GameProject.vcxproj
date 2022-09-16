@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.cpp" />
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\team-ketunaanakakutei\ゲーム制作\Game02\Project\GameProject\Game\Enemy.h" />
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Game\Player.h" />
   </ItemGroup>
