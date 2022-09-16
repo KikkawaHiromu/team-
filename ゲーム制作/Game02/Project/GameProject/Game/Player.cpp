@@ -11,26 +11,26 @@ Player::Player(const CVector2D& pos) : Base(eType_Player) {
 void Player::Update() {
 	const float speed = 10;
 	//è„
-	if (HOLD(CInput::eUp)) {
+	if (HOLD(CInput::eButton1)) {
 		m_pos.y -= speed;
 	}
 	//â∫
-	if (HOLD(CInput::eDown)) {
+	if (HOLD(CInput::eButton2)) {
 		m_pos.y += speed;
 	}
 	//âE
-	if (HOLD(CInput::eRight)) {
+	if (HOLD(CInput::eButton3)) {
 		m_pos.x += speed;
 	}
 	//ç∂
-	if (HOLD(CInput::eLeft)) {
+	if (HOLD(CInput::eButton4)) {
 		m_pos.x -= speed;
 	}
-	/*
-	if (PUSH(CInput::eButton1)) {
+	
+	if (HOLD(CInput::eMouseL)) {
 		Base::Add(new Bullet(m_pos));
 	}
-	*/
+	
 }
 
 void Player::Draw() {
