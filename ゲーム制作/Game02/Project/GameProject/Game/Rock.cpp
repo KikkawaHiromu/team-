@@ -27,7 +27,7 @@ void Rock::Draw()
 }
 void Rock::Collision(Base* b) {
 	switch (b->m_type) {
-	case eType_Rock:
+	case eType_Player:
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();

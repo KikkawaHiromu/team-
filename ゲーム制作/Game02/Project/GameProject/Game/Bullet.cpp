@@ -23,7 +23,7 @@ void Bullet::Draw()
 void Bullet::COllsion(Base* b)
 {
 	switch (b->m_type) {
-	case eType_Enemy:
+	case eType_Rock:
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();
