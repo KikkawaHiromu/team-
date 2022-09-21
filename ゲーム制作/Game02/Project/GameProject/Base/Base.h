@@ -1,6 +1,7 @@
 #pragma once
 #include<GLLibrary.h>
 enum {
+	eType_Field,
 	eType_Player,
 	eType_Enemy,
 	eType_Rock,
