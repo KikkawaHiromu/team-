@@ -29,7 +29,7 @@ void Player::Update() {
 	}
 	
 	if (PUSH(CInput::eMouseL)) {
-		Base::Add(new Bullet(m_pos));
+		Base::Add(new Bullet(m_pos+CVector2D(370,25)));
 	}
 	
 }
