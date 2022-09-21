@@ -1,5 +1,5 @@
 #include "Rock.h"
-
+#include "Effect.h"
 Rock::Rock(const CVector2D& pos) :Base(eType_Rock)
 {
 	m_img.Load("Image/Rock.png");
@@ -31,6 +31,7 @@ void Rock::Collision(Base* b) {
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();
+			Base::Add(new Effect(b->m_pos));
 		}
 		break;
 	}

@@ -65,7 +65,7 @@ void Init(void)
 	//ƒQ[ƒ€‹N“®‚Éˆê“x‚¾‚¯ŒÄ‚Î‚ê‚é
 	//-----------------------------------------------------
 
-	Base::Add(new Player(CVector2D(200, 500)));
+	Base::Add(new Player(CVector2D(50, 500)));
 	Base::Add(new Rock(CVector2D(1000, 200)));
 	ADD_RESOURCE("space", CImage::CreateImage("Image/space.png"));
 
