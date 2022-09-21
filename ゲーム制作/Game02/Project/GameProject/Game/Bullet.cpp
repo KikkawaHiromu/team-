@@ -4,7 +4,7 @@ Bullet::Bullet(const CVector2D& pos) :Base(eType_Bullet) {
 	m_img.Load("Image/ÉrÅ[ÉÄ3.png");
 	m_pos = pos;
 	m_rad = 12;
-	m_img.SetSize(500, 50);
+	m_img.SetSize(350, 50);
 	m_img.SetCenter(16,16);
 }
 
