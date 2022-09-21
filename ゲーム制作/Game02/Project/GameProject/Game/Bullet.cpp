@@ -5,7 +5,7 @@ Bullet::Bullet(const CVector2D& pos) :Base(eType_Bullet) {
 	m_pos = pos;
 	m_rad = 12;
 	m_img.SetSize(350, 50);
-	m_img.SetCenter(16,16);
+	m_img.SetCenter(330,25);
 }
 
 void Bullet::Update()
@@ -20,7 +20,7 @@ void Bullet::Draw()
 	m_img.Draw();
 }
 
-void Bullet::Collsion(Base* b)
+void Bullet::Collision(Base* b)
 {
 	switch (b->m_type) {
 	case eType_Rock:
