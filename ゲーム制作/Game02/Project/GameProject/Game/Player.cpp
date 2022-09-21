@@ -4,6 +4,7 @@
 Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Pl1.png");
 	m_pos = pos;
+	m_rad = 50;
 	m_img.SetSize(130, 150);
 	m_img.SetCenter(55, 55);
 }
