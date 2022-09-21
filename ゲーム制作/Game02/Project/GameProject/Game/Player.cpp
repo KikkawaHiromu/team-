@@ -28,7 +28,7 @@ void Player::Update() {
 		m_pos.x -= speed;
 	}
 	
-	if (HOLD(CInput::eMouseL)) {
+	if (PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(m_pos));
 	}
 	
