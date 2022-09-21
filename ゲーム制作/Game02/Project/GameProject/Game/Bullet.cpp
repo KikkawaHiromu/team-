@@ -1,11 +1,10 @@
 #include "Bullet.h"
-
+#include "Effect.h"
 Bullet::Bullet(const CVector2D& pos) :Base(eType_Bullet) {
 	m_img.Load("Image/ƒr[ƒ€3.png");
 	m_pos = pos;
 	m_rad = 12;
 	m_img.SetSize(500, 50);
-	m_img.SetCenter(16, 16);
 }
 
 void Bullet::Update()
@@ -27,6 +26,7 @@ void Bullet::COllsion(Base* b)
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();
+			Base::Add(new Effect(b->m_pos));
 			
 		}
 		break;
