@@ -1,6 +1,6 @@
 #pragma once
 #include"../Base/Base.h"
-#include "..\Game\Bullet.h"
+#include "../Game/Bullet.h"
 std::list<Base*> Base::m_list;
 Base::Base(int type) :m_type(type), m_pos(0, 0), m_rad(0) {
 
