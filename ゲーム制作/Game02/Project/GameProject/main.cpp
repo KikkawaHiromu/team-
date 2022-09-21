@@ -69,7 +69,7 @@ void Init(void)
 	Base::Add(new Rock(CVector2D(1000, 200)));
 	ADD_RESOURCE("space", CImage::CreateImage("Image/space.png"));
 
-
+	Base::Add(new Field());
 
 
 }
