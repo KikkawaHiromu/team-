@@ -30,10 +30,10 @@ void Player::Update() {
 	if (HOLD(CInput::eMouseL)) {
 		Base::Add(new Bullet(m_pos));
 	}
-	
+	m_scroll.x = m_pos.x - 1280 / 2;
 }
 
 void Player::Draw() {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }

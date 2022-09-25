@@ -1,6 +1,7 @@
 #pragma once
 #include<GLLibrary.h>
 enum {
+	eType_Field,
 	eType_Player,
 	eType_Enemy,
 	eType_Rock,
@@ -9,6 +10,7 @@ enum {
 	eType_Enemy_Bullet, 
 	eType_Effect,
 	eType_Scene,
+	eType_UI,
 };
 
 class Base {
@@ -20,7 +22,7 @@ public:
 	float m_ang;
 	static std::list<Base*> m_list;
 	bool m_kill;
-
+	static CVector2D m_scroll;
 public:
 	Base(int type);
 	virtual ~Base();
@@ -35,6 +37,7 @@ public:
 	static void CollisionAll();
 	static bool CollisionCircle(Base* b1, Base* b2);
 	static void CheckKillAll();
+	static CVector2D GetScreenPos(const CVector2D& pos);
 	Base* Base::FindObject(int Type);
 	static std::list<Base*>FindObjects(int type);
 };
