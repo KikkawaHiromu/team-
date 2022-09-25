@@ -20,9 +20,6 @@
     <ClCompile Include="Game\Rock.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Title\Title.cpp">
-      <Filter>Title</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -36,9 +33,6 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{39953494-e3d1-402f-bfa5-0d4aacb0116d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Title">
-      <UniqueIdentifier>{be7fa0f8-05b8-4e1e-9378-b5cac6cf3a2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="Game\Rock.h">
       <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Title\Title.h">
-      <Filter>Title</Filter>
     </ClInclude>
     <ClInclude Include="Game\Game.h">
       <Filter>Game</Filter>
