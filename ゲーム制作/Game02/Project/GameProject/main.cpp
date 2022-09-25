@@ -5,9 +5,10 @@
 
 #include "Game/Player.h"
 #include "Base/Base.h"
-#include"Game/Enemy.h"
-#include"Game/Rock.h"
-#include"Game/Field.h"
+#include "Game/Enemy.h"
+#include "Game/Rock.h"
+#include "Game/Field.h"
+#include "Game/UI.h"
 //--------------------------------------------
 //ƒOƒ[ƒoƒ‹•Ï”—Ìˆæ
 //--------------------------------------------
@@ -67,6 +68,7 @@ void Init(void)
 
 	Base::Add(new Player(CVector2D(50, 500)));
 	Base::Add(new Rock(CVector2D(1000, 200)));
+	Base::Add(new UI());
 	ADD_RESOURCE("space", CImage::CreateImage("Image/space.png"));
 
 	Base::Add(new Field());
