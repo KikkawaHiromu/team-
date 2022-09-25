@@ -2,8 +2,12 @@
 #include"../Base/Base.h"
 #include "../Game/Bullet.h"
 std::list<Base*> Base::m_list;
+CVector2D Base::m_scroll(0, 0);
 Base::Base(int type) :m_type(type), m_pos(0, 0), m_rad(0) {
 
+}
+CVector2D Base::GetScreenPos(const CVector2D& pos) {
+	return pos - m_scroll;
 }
 Base::~Base() {
 

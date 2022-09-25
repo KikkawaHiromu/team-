@@ -31,10 +31,11 @@ void Player::Update() {
 	if (PUSH(CInput::eMouseL)) {
 		Base::Add(new Bullet(m_pos+CVector2D(370,25)));
 	}
-	
+	m_scroll.x = m_pos.x - 1280 / 2;
+	m_scroll.y = m_pos.y - 600;
 }
 
 void Player::Draw() {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }
