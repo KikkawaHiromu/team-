@@ -36,7 +36,7 @@ void Effect::Update() {
 
 void Effect::Draw() {
 	//À•W
-	m_img.SetPos(GetScreenPos(m_pos));
+	m_img.SetPos(m_pos);
 	//‰æ‘œ‚Ì•\¦
 	m_img.Draw();
 

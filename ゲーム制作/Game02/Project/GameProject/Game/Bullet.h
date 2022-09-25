@@ -8,5 +8,5 @@ public:
 	Bullet(const CVector2D& pos);
 	void Update();
 	void Draw();
-	void Collision(Base* b);
+	void COllsion(Base* b);
 };

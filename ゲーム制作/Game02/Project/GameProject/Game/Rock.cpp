@@ -1,5 +1,5 @@
 #include "Rock.h"
-#include "Effect.h"
+
 Rock::Rock(const CVector2D& pos) :Base(eType_Rock)
 {
 	m_img.Load("Image/Rock.png");
@@ -21,17 +21,16 @@ void Rock::Update()
 
 void Rock::Draw()
 {
-	m_img.SetPos(GetScreenPos(m_pos));
+	m_img.SetPos(m_pos);
 	m_img.SetAng(m_ang);
 	m_img.Draw();
 }
 void Rock::Collision(Base* b) {
 	switch (b->m_type) {
-	case eType_Player:
+	case eType_Rock:
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();
-			Base::Add(new Effect(b->m_pos));
 		}
 		break;
 	}
