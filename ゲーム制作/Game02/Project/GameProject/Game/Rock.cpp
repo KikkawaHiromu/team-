@@ -21,7 +21,7 @@ void Rock::Update()
 
 void Rock::Draw()
 {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.SetAng(m_ang);
 	m_img.Draw();
 }
