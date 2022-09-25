@@ -18,13 +18,12 @@ Title::~Title()
 }
 
 void Title::Update()
-{/*
+{
 	//ボタン１でタイトル破棄
 	if (PUSH(CInput::eButton1)) {
 		SetKill();
-		
+	}
 }
-
 void Title::Draw()
 {
 	m_img.Draw();
