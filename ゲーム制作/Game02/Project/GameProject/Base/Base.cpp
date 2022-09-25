@@ -96,6 +96,12 @@ Base* Base::FindObject(int type) {
 	}
 	return nullptr;
 }
+void Base::KillAll() {
+	std::list<Base*> ret;
+	for (auto& b : m_list) {
+		b->SetKill();
+	}
+}
 std::list<Base*>Base::FindObjects(int type) {
 	std::list<Base*>ret;
 	for (auto& b : m_list) {
