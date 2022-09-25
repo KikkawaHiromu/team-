@@ -7,7 +7,8 @@ enum {
 	eType_Bullet,
 	eType_Player_Bullet,
 	eType_Enemy_Bullet, 
-	eType_Effect
+	eType_Effect,
+	eType_Scene,
 };
 
 class Base {
