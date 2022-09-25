@@ -4,6 +4,7 @@
 Player::Player(const CVector2D& pos) : Base(eType_Player) {
 	m_img.Load("Image/Pl1.png");
 	m_pos = pos;
+	m_rad = 50;
 	m_img.SetSize(130, 150);
 	m_img.SetCenter(55, 55);
 }
@@ -27,13 +28,13 @@ void Player::Update() {
 		m_pos.x -= speed;
 	}
 	
-	if (HOLD(CInput::eMouseL)) {
-		Base::Add(new Bullet(m_pos));
+	if (PUSH(CInput::eMouseL)) {
+		Base::Add(new Bullet(m_pos+CVector2D(370,25)));
 	}
-	
+	m_scroll.x = m_pos.x - 1280 / 2;
 }
 
 void Player::Draw() {
-	m_img.SetPos(m_pos);
+	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
 }
