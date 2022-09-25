@@ -28,7 +28,7 @@ public:
 	virtual void Draw();
 	virtual void Collision(Base* b);
 	void SetKill() { m_kill = true; }
-
+	static void KillAll();
 	static void UpdateAll();
 	static void DrawAll();
 	static void Add(Base* b);
