@@ -14,9 +14,9 @@ void Rock::Update()
 	const int move_speed = 1;
 	m_pos.x -= move_speed;
 	m_ang -=0.008;
-	if (m_pos.x < 0 - 25) {
+	/*if (m_pos.x < 0 - 25) {
 		m_kill = true;
-	}
+	}*/
 }
 
 void Rock::Draw()
