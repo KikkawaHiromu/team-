@@ -5,9 +5,10 @@
 
 #include "Game/Player.h"
 #include "Base/Base.h"
-#include"Game/Enemy.h"
-#include"Game/Rock.h"
-
+#include "Game/Enemy.h"
+#include "Game/Rock.h"
+#include "Game/Field.h"
+#include "Game/UI.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -19,8 +20,9 @@ void MainLoop(void) {
 	//ゲーム中の動きはここに書く
 	//ゲーム中はこの関数_を1秒間に60回呼び出している
 	//--------------------------------------------------------------
-
+	
 	Base::UpdateAll();
+	Base::CheckKillAll();
 	Base::CollisionAll();
 	Base::DrawAll();
 
@@ -64,12 +66,12 @@ void Init(void)
 	//ゲーム起動時に一度だけ呼ばれる
 	//-----------------------------------------------------
 
-	Base::Add(new Player(CVector2D(200, 500)));
-	Base::Add(new Enemy(CVector2D(1000, 400)));
+	Base::Add(new Player(CVector2D(50, 500)));
 	Base::Add(new Rock(CVector2D(1000, 200)));
+	Base::Add(new UI());
+	ADD_RESOURCE("space", CImage::CreateImage("Image/space.png"));
 
-
-
+	Base::Add(new Field());
 
 
 }

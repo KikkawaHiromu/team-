@@ -15,9 +15,14 @@
     <ClCompile Include="Game\Bullet.cpp" />
     <ClCompile Include="Game\Effect.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Game\Game.cpp" />
+=======
+    <ClCompile Include="Game\Field.cpp" />
+>>>>>>> 892f17bf5ac9e29f1cd28d6dea4af74860d49fe7
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Rock.cpp" />
+    <ClCompile Include="Game\UI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Title\Title.cpp" />
   </ItemGroup>
@@ -26,10 +31,17 @@
     <ClInclude Include="Game\Bullet.h" />
     <ClInclude Include="Game\Effect.h" />
     <ClInclude Include="Game\Enemy.h" />
+<<<<<<< HEAD
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Rock.h" />
     <ClInclude Include="Title\Title.h" />
+=======
+    <ClInclude Include="Game\Field.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\Rock.h" />
+    <ClInclude Include="Game\UI.h" />
+>>>>>>> 892f17bf5ac9e29f1cd28d6dea4af74860d49fe7
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE2CE3B1-49BF-46A5-9DB1-9BD5B52FE1A0}</ProjectGuid>
