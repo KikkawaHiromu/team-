@@ -7,7 +7,7 @@
 #include "Base/Base.h"
 #include"Game/Enemy.h"
 #include"Game/Rock.h"
-
+#include "Title/Title.h"
 //--------------------------------------------
 //ÉOÉçÅ[ÉoÉãïœêîóÃàÊ
 //--------------------------------------------
@@ -23,7 +23,7 @@ void MainLoop(void) {
 	Base::UpdateAll();
 	Base::CollisionAll();
 	Base::DrawAll();
-
+	Base::CheckKillAll();
 
 
 
@@ -67,9 +67,9 @@ void Init(void)
 	Base::Add(new Player(CVector2D(200, 500)));
 	Base::Add(new Enemy(CVector2D(1000, 400)));
 	Base::Add(new Rock(CVector2D(1000, 200)));
-
-
-
+	ADD_RESOURCE("space", CImage::CreateImage("Image/space.png"));
+	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title1.png"));
+	Base::Add(new Title());
 
 
 }
