@@ -29,6 +29,6 @@ void Title::Draw()
 	m_img.Draw();
 	//•¶Žš•\Ž¦
 	m_title_text.Draw(400, 256, 255, 255, 0, "GAMESTART");
-	m_title_text.Draw(470, 512, 255, 255, 0, "Push Z");
+	m_title_text.Draw(470, 512, 255, 255, 0, "Push W");
 
 }
