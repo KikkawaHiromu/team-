@@ -49,6 +49,15 @@ void Base::Add(Base* b) {
 	//オブジェクトbを末尾に追加
 	m_list.push_back(b);
 }
+void Base::KillAll() {
+	std::list<Base*> ret;
+	for (auto& b : m_list) {
+		b->SetKill();
+	}
+}
+
+
+
 bool Base::CollisionCircle(Base* b1, Base* b2) {
 	CVector2D v = b1->m_pos - b2->m_pos;
 	float l = v.Length();
@@ -87,6 +96,7 @@ void Base::CheckKillAll()
 		}
 	}
 }
+
 Base* Base::FindObject(int type) {
 	//先頭の要素
 	auto it = m_list.begin();
@@ -102,11 +112,9 @@ Base* Base::FindObject(int type) {
 	}
 	return nullptr;
 }
-void Base::KillAll() {
-	std::list<Base*> ret;
-	for (auto& b : m_list) {
-		b->SetKill();
-	}
+void Base::DrawRect()
+{
+	
 }
 std::list<Base*>Base::FindObjects(int type) {
 	std::list<Base*>ret;
