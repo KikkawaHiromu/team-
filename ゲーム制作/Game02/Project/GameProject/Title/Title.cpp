@@ -9,12 +9,12 @@ m_title_text("C:\\Windows\\Fonts\\msgothic.ttc", 100)
 
 Title::~Title()
 {
-	/*
+	
 	//全てのオブジェクトを破棄
 	Base::KillAll();
 	//ゲームシーンへ
 	Base::Add(new Game());
-	*/
+	
 }
 
 void Title::Update()
