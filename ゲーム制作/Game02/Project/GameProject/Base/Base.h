@@ -2,6 +2,7 @@
 #include<GLLibrary.h>
 enum {
 	eType_Field,
+	eType_UI,
 	eType_Player,
 	eType_Enemy,
 	eType_Rock,
@@ -10,7 +11,6 @@ enum {
 	eType_Enemy_Bullet, 
 	eType_Effect,
 	eType_Scene,
-	eType_UI,
 };
 
 class Base {

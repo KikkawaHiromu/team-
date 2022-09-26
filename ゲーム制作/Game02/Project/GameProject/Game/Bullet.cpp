@@ -24,6 +24,7 @@ void Bullet::Collision(Base* b)
 {
 	switch (b->m_type) {
 	case eType_Rock:
+	case eType_Enemy:
 		if (Base::CollisionCircle(this, b)) {
 			b->SetKill();
 			SetKill();

@@ -12,14 +12,13 @@ void UI::Draw()
 		m_img.SetPos(200 - 16 * i, 0);
 		m_img.Draw();
 		*/
-		Base* Rock = Base::FindObject(eType_Rock);
-
-		//敵がいなければ
-		if (Rock == nullptr) {
-			//ゲームクリアの表示
-			m_img.SetRect(0, 64, 0 + 160, 64 + 32);
-			m_img.SetSize(160, 32);
-			m_img.SetPos(100, 200);
-			m_img.Draw();
-		}
+	Base* Rock = Base::FindObject(eType_Rock);
+	//敵がいなければ
+	if (Rock == nullptr) {
+		//ゲームクリアの表示
+		m_img.SetRect(0, 64, 0 + 160, 64 + 32);
+		m_img.SetSize(160, 32);
+		m_img.SetPos(100, 200);
+		m_img.Draw();
 	}
+}
