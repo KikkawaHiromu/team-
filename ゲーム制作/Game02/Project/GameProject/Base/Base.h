@@ -23,6 +23,8 @@ public:
 	static std::list<Base*> m_list;
 	bool m_kill;
 	static CVector2D m_scroll;
+	//‹éŒ`
+	CRect	m_rect;
 public:
 	Base(int type);
 	virtual ~Base();
@@ -40,4 +42,6 @@ public:
 	static CVector2D GetScreenPos(const CVector2D& pos);
 	Base* Base::FindObject(int Type);
 	static std::list<Base*>FindObjects(int type);
+	/// ‹éŒ`‚Ì•\Ž¦
+	void DrawRect();
 };
